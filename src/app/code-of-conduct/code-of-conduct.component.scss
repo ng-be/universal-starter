@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+:host {
+
+  display: block;
+
+  .code-of-conduct {
+
+    &-intro {
+
+      max-width: 650px;
+      margin: 0 auto;
+
+    }
+
+    &-moreinfo {
+
+      max-width: 650px;
+      margin: 0 auto;
+
+    }
+
+  }
+
+}

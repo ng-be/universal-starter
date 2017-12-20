@@ -1,0 +1,21 @@
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+:host {
+
+  display: block;
+
+  @include media-breakpoint-up(lg) {
+    margin: {
+      top: 25px;
+    }
+  }
+
+  p {
+    margin: {
+      bottom: 5px;
+    }
+  }
+
+}

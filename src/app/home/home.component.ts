@@ -1,16 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'home',
-  template: `<h3>{{ message }}</h3>`
+  templateUrl: './home.component.html',
+  styleUrls: [
+    './home.component.scss'
+  ]
 })
-export class HomeComponent implements OnInit {
-  public message: string;
+export class HomeComponent {
 
-  constructor() {}
-
-  ngOnInit() {
-    this.message = 'Hello';
+  constructor() {
   }
+
 }

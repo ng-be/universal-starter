@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+
+:host {
+
+  display: block;
+
+  .team-members-intro {
+    margin-bottom: 40px;
+  }
+
+  .team-member {
+
+    text: {
+      align: left;
+    }
+    margin-bottom: 30px;
+
+    &__image {
+      img {
+        border-radius: 50%;
+        border: 6px solid $ngbe-yellow;
+        width: 100%;
+      }
+    }
+
+    &__name {
+      font-size: 1.4rem;
+    }
+
+    &__title {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    &__description {
+      margin-bottom: 10px;
+    }
+
+  }
+}

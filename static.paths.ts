@@ -1,5 +1,7 @@
 export const ROUTES = [
   '/',
-  '/lazy',
-  '/lazy/nested'
+  '/team',
+  '/location',
+  '/code-of-conduct',
+  '/terms-and-conditions'
 ];

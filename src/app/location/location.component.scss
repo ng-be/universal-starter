@@ -1,0 +1,62 @@
+@import "../../styles/variables";
+
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+:host {
+
+  display: block;
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: 350px;
+  }
+
+  .location-intro {
+    text-align: center;
+  }
+
+  .location-more-info {
+    margin: {
+      top: 25px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      text-align: center !important;
+      .text-right {
+        text-align: center !important;
+      }
+    }
+  }
+
+  .location-images {
+    display: flex;
+    flex-wrap: wrap;
+    img {
+      width: 100%;
+    }
+  }
+
+  .location-image {
+    flex: 1 0 300px;
+  }
+
+  .location-image--25 {
+    flex: 1 0 25%;
+  }
+
+  .location-image--33 {
+    flex: 1 0 33%;
+  }
+
+  .location-image--50 {
+    flex: 1 0 50%;
+  }
+
+  .location-image--100 {
+    flex: 1 0 100%;
+  }
+
+}

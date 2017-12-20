@@ -1,0 +1,75 @@
+@import "../../../../styles/variables";
+
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+:host {
+
+  display: block;
+
+  padding: 25px 0 0 0;
+
+  .last {
+    display: none;
+    @include media-breakpoint-down(xs) {
+      display: block;
+    }
+  }
+
+  .first {
+    display: none;
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
+
+  }
+
+  .community-logo {
+
+    position: relative;
+    margin-bottom: 20px;
+
+    /*
+    @media (min-width: 768px) and (max-width: 991px) {
+      &.col-sm-offset-1point5 {
+        margin-left: 10.416666667%;
+      }
+    }
+    */
+
+    a {
+      display: block;
+      box-sizing: border-box;
+      img {
+        display: block;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 100px;
+        box-sizing: border-box;
+        padding: 20px;
+
+        @include media-breakpoint-between(sm, md) {
+          padding: 5px;
+        }
+
+      }
+      &:hover {
+        text-decoration: none;
+        border: none;
+
+        img {
+          transform: rotate(10deg);
+        }
+      }
+    }
+    &.community-logo--round {
+      a {
+        img {
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+
+}

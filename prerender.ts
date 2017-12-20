@@ -16,12 +16,25 @@ import { renderModuleFactory } from '@angular/platform-server';
 import { ROUTES } from './static.paths';
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
-const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/main.bundle');
+const {AppServerModuleNgFactory, LAZY_MODULE_MAP} = require('./dist/server/main.bundle');
 
 const BROWSER_FOLDER = join(process.cwd(), 'browser');
 
 // Load the index.html file containing referances to your application bundle.
 const index = readFileSync(join('browser', 'index.html'), 'utf8');
+
+const htmlMinifyConfig = {
+  'removeComments': true,
+  'removeCommentsFromCDATA': true,
+  'collapseWhitespace': true,
+  'collapseBooleanAttributes': true,
+  'removeAttributeQuotes': true,
+  'removeRedundantAttributes': true,
+  'useShortDoctype': true,
+  'removeEmptyAttributes': true,
+  'removeOptionalTags': true,
+  'minifyCSS': true,
+};
 
 let previousRender = Promise.resolve();
 
@@ -30,7 +43,7 @@ ROUTES.forEach(route => {
   var fullPath = join(BROWSER_FOLDER, route);
 
   // Make sure the directory structure is there
-  if(!existsSync(fullPath)){
+  if (!existsSync(fullPath)) {
     mkdirSync(fullPath);
   }
 
@@ -41,5 +54,8 @@ ROUTES.forEach(route => {
     extraProviders: [
       provideModuleMap(LAZY_MODULE_MAP)
     ]
-  })).then(html => writeFileSync(join(fullPath, 'index.html'), html));
+  })).then(html => {
+    //html = htmlMinifier.minify(html, htmlMinifyConfig);
+    writeFileSync(join(fullPath, 'index.html'), html)
+  });
 });
