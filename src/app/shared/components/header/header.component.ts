@@ -1,6 +1,10 @@
 import { Component, ElementRef, Inject, ViewChild } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
+
+import { Seo } from '../../interfaces/seo.interface';
+import { SeoService } from '../../services/seo.service';
 
 declare const window: any;
 
@@ -16,11 +20,25 @@ export class HeaderComponent {
   @ViewChild('navbarToggler') navbarToggler: ElementRef;
 
   constructor(@Inject('isBrowser') private isBrowser: boolean,
-              private router: Router) {
+              private router: Router,
+              private activatedRoute: ActivatedRoute,
+              private seoService: SeoService) {
 
-    router.events
+    this.handleNavigationEnd();
+
+  }
+
+  private handleNavigationEnd() {
+
+    this.router.events
       .filter(event => event instanceof NavigationEnd)
-      .subscribe((event: NavigationEnd) => {
+      .map(() => this.activatedRoute)
+      .map(route => {
+        while (route.firstChild) route = route.firstChild;
+        return route;
+      })
+      .filter(route => route.outlet === 'primary')
+      .subscribe((route) => {
 
         if (!this.navbarToggler.nativeElement.classList.contains('collapsed')) {
           this.navbarToggler.nativeElement.click();
@@ -28,8 +46,10 @@ export class HeaderComponent {
         if (this.isBrowser) {
           window.scroll(0, 0);
         }
-      });
 
+        this.seoService.handle(route.snapshot.data);
+
+      });
   }
 
 }

@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router'
 
 import { LocationComponent } from './location.component';
 import { SharedModule } from '../shared/shared.module';
+import { LocationRoutes } from './location.routes';
 
 const COMPONENTS = [
   LocationComponent
@@ -11,7 +12,7 @@ const COMPONENTS = [
 const IMPORTS = [
   SharedModule,
   RouterModule.forChild([
-    {path: '', component: LocationComponent, pathMatch: 'full'}
+    ...LocationRoutes
   ])
 ];
 

@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router'
 
 import { TeamComponent } from './team.component';
 import { SharedModule } from '../shared/shared.module';
+import { TeamRoutes } from './team.routes';
 
 const COMPONENTS = [
   TeamComponent
@@ -11,7 +12,7 @@ const COMPONENTS = [
 const IMPORTS = [
   SharedModule,
   RouterModule.forChild([
-    {path: '', component: TeamComponent, pathMatch: 'full'}
+    ...TeamRoutes
   ])
 ];
 

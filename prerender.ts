@@ -23,19 +23,6 @@ const BROWSER_FOLDER = join(process.cwd(), 'browser');
 // Load the index.html file containing referances to your application bundle.
 const index = readFileSync(join('browser', 'index.html'), 'utf8');
 
-const htmlMinifyConfig = {
-  'removeComments': true,
-  'removeCommentsFromCDATA': true,
-  'collapseWhitespace': true,
-  'collapseBooleanAttributes': true,
-  'removeAttributeQuotes': true,
-  'removeRedundantAttributes': true,
-  'useShortDoctype': true,
-  'removeEmptyAttributes': true,
-  'removeOptionalTags': true,
-  'minifyCSS': true,
-};
-
 let previousRender = Promise.resolve();
 
 // Iterate each route path

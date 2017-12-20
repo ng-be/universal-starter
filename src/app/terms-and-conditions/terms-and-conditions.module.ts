@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router'
 
 import { TermsAndConditionsComponent } from './terms-and-conditions.component';
 import { SharedModule } from '../shared/shared.module';
+import { TermsAndConditionsRoutes } from './terms-and-conditions.routes';
 
 const COMPONENTS = [
   TermsAndConditionsComponent
@@ -11,7 +12,7 @@ const COMPONENTS = [
 const IMPORTS = [
   SharedModule,
   RouterModule.forChild([
-    {path: '', component: TermsAndConditionsComponent, pathMatch: 'full'}
+    ...TermsAndConditionsRoutes
   ])
 ];
 

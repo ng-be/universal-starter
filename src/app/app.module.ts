@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
+import { AppRoutes } from './app.routes';
 import { HomeComponent } from './home/home.component';
 
 const COMPONENTS = [
@@ -17,18 +18,10 @@ const PROVIDERS = [
   {provide: 'isNode', useValue: false},
 ];
 
-
 const IMPORTS = [
   BrowserModule.withServerTransition({appId: 'ngbe-app'}),
   RouterModule.forRoot([
-    {path: '', component: HomeComponent, pathMatch: 'full'},
-    {path: 'location', loadChildren: './location/location.module#LocationModule'},
-    {path: 'team', loadChildren: './team/team.module#TeamModule'},
-    {path: 'code-of-conduct', loadChildren: './code-of-conduct/code-of-conduct.module#CodeOfConductModule'},
-    {
-      path: 'terms-and-conditions',
-      loadChildren: './terms-and-conditions/terms-and-conditions.module#TermsAndConditionsModule'
-    }
+    ...AppRoutes
   ]),
   SharedModule
 ];
