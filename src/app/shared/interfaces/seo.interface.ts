@@ -1,4 +1,6 @@
-export interface Seo {
-  title: string;
-  description: string;
+export interface ISeo {
+  title?: string;
+  description?: string;
+  url?: string;
+  images?: string[]
 }

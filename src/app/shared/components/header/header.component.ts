@@ -3,7 +3,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 
-import { Seo } from '../../interfaces/seo.interface';
+import { ISeo } from '../../interfaces/seo.interface';
 import { SeoService } from '../../services/seo.service';
 
 declare const window: any;
@@ -47,7 +47,11 @@ export class HeaderComponent {
           window.scroll(0, 0);
         }
 
-        this.seoService.handle(route.snapshot.data);
+        const seoData = Object.assign({}, <ISeo>route.snapshot.data.seo, {
+          url: this.router.routerState.snapshot.url
+        });
+
+        this.seoService.handle(seoData);
 
       });
   }
