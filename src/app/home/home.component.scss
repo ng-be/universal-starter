@@ -1,3 +1,5 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid";
+
 :host {
 
   display: block;
@@ -7,6 +9,28 @@
       margin: {
         bottom: 0;
       }
+    }
+  }
+
+  .editx-challenge {
+
+    padding: 25px 0;
+    max-width: 700px;
+    margin: 0 auto;
+    text: {
+      align: center;
+    }
+
+    p {
+      padding: 0 50px;
+    }
+
+    img {
+      display: block;
+      width: calc(100% - 50px);
+      max-width: 700px;
+      margin: 0 25px;
+
     }
   }
 
