@@ -16,6 +16,14 @@ export const AppRoutes = [
     loadChildren: './location/location.module#LocationModule'
   },
   {
+    path: 'conference-day',
+    loadChildren: './location/conference-day.module#ConferenceDayModule'
+  },
+  {
+    path: 'workshop-day',
+    loadChildren: './location/workshop-day.module#WorkshopDayModule'
+  },
+  {
     path: 'team',
     loadChildren: './team/team.module#TeamModule'
   },
