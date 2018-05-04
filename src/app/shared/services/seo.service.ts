@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 import { ISeo } from '../interfaces/seo.interface';
+import { LinkService } from './link.service';
 
 @Injectable()
 export class SeoService {
@@ -12,6 +13,7 @@ export class SeoService {
   private baseImg = '/assets/img/share/home.jpg';
 
   constructor(private titleService: Title,
+              private linkService: LinkService,
               private metaService: Meta) {
 
   }
@@ -38,6 +40,9 @@ export class SeoService {
     }
 
     this.titleService.setTitle(title);
+    this.metaService.addTags([
+      {property: 'og:image:alt', content: title},
+    ]);
   }
 
   private handleDescription(description?: string) {
@@ -61,6 +66,10 @@ export class SeoService {
     this.metaService.addTags([
       {property: 'og:url', content: url},
     ]);
+    this.linkService.updateTag({
+      rel: 'canonical',
+      href: url
+    })
   }
 
   private handleImage(image?: string) {

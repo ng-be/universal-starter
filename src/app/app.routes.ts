@@ -17,11 +17,11 @@ export const AppRoutes = [
   },
   {
     path: 'conference-day',
-    loadChildren: './location/conference-day.module#ConferenceDayModule'
+    loadChildren: './conference-day/conference-day.module#ConferenceDayModule'
   },
   {
     path: 'workshop-day',
-    loadChildren: './location/workshop-day.module#WorkshopDayModule'
+    loadChildren: './workshop-day/workshop-day.module#WorkshopDayModule'
   },
   {
     path: 'team',

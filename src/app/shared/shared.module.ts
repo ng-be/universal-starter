@@ -6,6 +6,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { OrganisersComponent } from './components/organisers/organisers.component';
 import { CommunityComponent } from './components/community/community.component';
 import { SeoService } from './services/seo.service';
+import { LinkService } from './services/link.service';
 
 const COMPONENTS = [
   HeaderComponent,
@@ -15,7 +16,8 @@ const COMPONENTS = [
 ];
 
 const PROVIDERS = [
-  SeoService
+  SeoService,
+  LinkService
 ];
 
 const MODULES = [
