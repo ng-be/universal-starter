@@ -1,4 +1,7 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
 @import "../../styles/variables";
 
 :host {
@@ -18,6 +21,13 @@
       top: 10px;
       bottom: 10px;
     }
+
+    @include media-breakpoint-down(md) {
+      text: {
+        align: center !important;
+      }
+    }
+
     &__title {
       color: $ngbe-yellow;
     }

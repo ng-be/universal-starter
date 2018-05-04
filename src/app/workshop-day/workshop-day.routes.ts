@@ -8,7 +8,7 @@ export const WorkshopDayRoutes = [
     data: {
       seo: {
         title: 'Workshop Day',
-        description: ''
+        description: 'There will be 3 workshops the day before the conference. Please bring your own laptop and note that workshop tickets are sold separately.'
       }
     }
   }

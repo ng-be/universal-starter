@@ -1,5 +1,6 @@
 export const ROUTES = [
   '/',
+  '/sponsors',
   '/team',
   '/location',
   '/conference-day',

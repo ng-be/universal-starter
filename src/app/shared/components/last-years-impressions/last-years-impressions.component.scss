@@ -1,3 +1,7 @@
+@import "../../../../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins/breakpoints";
 @import "../../../../styles/variables";
 
 :host {
@@ -9,6 +13,12 @@
     margin: 20px auto;
   }
   .last-years-impression {
+
+    @include media-breakpoint-down(md) {
+      text: {
+        align: center !important;
+      }
+    }
 
     &__title {
       color: $ngbe-yellow;

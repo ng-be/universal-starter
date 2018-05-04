@@ -6,10 +6,12 @@ export const AppRoutes = [
     component: HomeComponent,
     pathMatch: 'full',
     data: {
-      seo: {
-
-      }
+      seo: {}
     }
+  },
+  {
+    path: 'sponsors',
+    loadChildren: './sponsors/sponsors.module#SponsorsModule'
   },
   {
     path: 'location',
