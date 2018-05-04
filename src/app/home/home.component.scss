@@ -7,8 +7,25 @@
   .container {
     p {
       margin: {
-        bottom: 0;
+        // bottom: 0;
       }
+    }
+  }
+
+  .schedule-day {
+    margin: {
+      top: 10px;
+      bottom: 10px;
+    }
+    &__title {
+      font-weight: bold;
+      color: #f9dc29;
+    }
+    &__date {
+
+    }
+    &__description {
+
     }
   }
 
