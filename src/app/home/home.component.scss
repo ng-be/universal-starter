@@ -1,4 +1,5 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../styles/variables";
 
 :host {
 
@@ -18,8 +19,7 @@
       bottom: 10px;
     }
     &__title {
-      font-weight: bold;
-      color: #f9dc29;
+      color: $ngbe-yellow;
     }
     &__date {
 

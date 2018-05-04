@@ -7,12 +7,14 @@ import { OrganisersComponent } from './components/organisers/organisers.componen
 import { CommunityComponent } from './components/community/community.component';
 import { SeoService } from './services/seo.service';
 import { LinkService } from './services/link.service';
+import { LastYearsImpressionsComponent } from './components/last-years-impressions/last-years-impressions.component';
 
 const COMPONENTS = [
   HeaderComponent,
   FooterComponent,
   OrganisersComponent,
-  CommunityComponent
+  CommunityComponent,
+  LastYearsImpressionsComponent
 ];
 
 const PROVIDERS = [

@@ -1,0 +1,26 @@
+@import "../../../../styles/variables";
+
+:host {
+
+  display: block;
+
+  .memories {
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  .last-years-impression {
+
+    &__title {
+      color: $ngbe-yellow;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      display: block;
+      margin: 30px auto;
+      min-height: 200px;
+    }
+
+  }
+}
