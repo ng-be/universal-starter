@@ -1,7 +1,6 @@
 import { Component, ElementRef, Inject, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/map';
+import { map, filter } from 'rxjs/operators';
 
 import { ISeo } from '../../interfaces/seo.interface';
 import { SeoService } from '../../services/seo.service';
@@ -31,13 +30,15 @@ export class HeaderComponent {
   private handleNavigationEnd() {
 
     this.router.events
-      .filter(event => event instanceof NavigationEnd)
-      .map(() => this.activatedRoute)
-      .map(route => {
-        while (route.firstChild) route = route.firstChild;
-        return route;
-      })
-      .filter(route => route.outlet === 'primary')
+      .pipe(
+        filter(event => event instanceof NavigationEnd),
+        map(() => this.activatedRoute),
+        map(route => {
+          while (route.firstChild) route = route.firstChild;
+          return route;
+        }),
+        filter(route => route.outlet === 'primary')
+      )
       .subscribe((route) => {
 
         if (!this.navbarToggler.nativeElement.classList.contains('collapsed')) {

@@ -14,7 +14,7 @@ morgan.log
 /compiled/
 
 # Node #
-npm-debug.log
+*.log
 /npm-debug.log.*
 package-lock.json
 
