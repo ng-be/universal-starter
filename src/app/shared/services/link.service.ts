@@ -1,5 +1,5 @@
-import { Injectable, RendererFactory2, ViewEncapsulation, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import {Injectable, RendererFactory2, ViewEncapsulation, Inject} from '@angular/core';
+import {DOCUMENT} from '@angular/common';
 
 @Injectable()
 export class LinkService {

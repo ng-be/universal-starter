@@ -7,7 +7,4 @@ import { Component } from '@angular/core';
     './code-of-conduct.component.scss'
   ]
 })
-export class CodeOfConductComponent {
-
-
-}
+export class CodeOfConductComponent {}

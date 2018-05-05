@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core'
-import { RouterModule } from '@angular/router'
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 
-import { LocationComponent } from './location.component';
-import { SharedModule } from '../shared/shared.module';
-import { LocationRoutes } from './location.routes';
+import {LocationComponent} from './location.component';
+import {SharedModule} from '../shared/shared.module';
+import {LocationRoutes} from './location.routes';
 
 const COMPONENTS = [
   LocationComponent
@@ -25,5 +25,4 @@ const IMPORTS = [
   ]
 })
 export class LocationModule {
-
 }

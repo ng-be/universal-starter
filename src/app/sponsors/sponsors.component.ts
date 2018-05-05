@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'ngbe-sponsors',
@@ -8,6 +8,4 @@ import { Component } from '@angular/core';
   ]
 })
 export class SponsorsComponent {
-
-
 }

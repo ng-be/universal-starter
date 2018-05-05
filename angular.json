@@ -1,11 +1,10 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "$schema": "./node_modules/@angular-devkit/core/src/workspace/workspace-schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-universal-demo": {
+    "ngbe2018": {
       "root": "",
-      "sourceRoot": "src",
       "projectType": "application",
       "architect": {
         "build": {
@@ -17,17 +16,22 @@
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
             "assets": [
-              "src/assets",
-              "src/favicon.ico"
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
+              },
+              {
+                "glob": "favicon.ico",
+                "input": "src",
+                "output": "/"
+              },
+              "src/assets/manifest.json"
             ],
             "styles": [
               "src/styles/styles.scss"
             ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/popper.js/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -40,32 +44,31 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "serviceWorker": true,
-              "ngswConfigPath": "/src/ngsw-config.json",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
                 }
-              ]
+              ],
+              "serviceWorker": true
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ng-universal-demo:build"
+            "browserTarget": "ngbe2018:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ng-universal-demo:build:production"
+              "browserTarget": "ngbe2018:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng-universal-demo:build"
+            "browserTarget": "ngbe2018:build"
           }
         },
         "test": {
@@ -75,17 +78,22 @@
             "karmaConfig": "./karma.conf.js",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
-            "scripts": [
-              "node_modules/jquery/jquery.min.js",
-              "node_modules/popper.js/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ],
+            "scripts": [],
             "styles": [
               "src/styles/styles.scss"
             ],
             "assets": [
-              "src/assets",
-              "src/favicon.ico"
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
+              },
+              {
+                "glob": "favicon.ico",
+                "input": "src",
+                "output": "/"
+              },
+              "src/assets/manifest.json"
             ]
           }
         },
@@ -104,22 +112,23 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/server",
-            "main": "main.server.ts",
-            "tsConfig": "tsconfig.server.json"
+            "main": "src/main.server.ts",
+            "tsConfig": "src/tsconfig.server.json"
           }
         }
       }
     },
-    "ng-universal-demo-e2e": {
+    "ngbe2018-e2e": {
       "root": "",
-      "sourceRoot": "",
       "projectType": "application",
+      "cli": {},
+      "schematics": {},
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "ng-universal-demo:serve"
+            "devServerTarget": "ngbe2018:serve"
           }
         },
         "lint": {
@@ -134,7 +143,7 @@
       }
     }
   },
-  "defaultProject": "ng-universal-demo",
+  "cli": {},
   "schematics": {
     "@schematics/angular:class": {
       "spec": false

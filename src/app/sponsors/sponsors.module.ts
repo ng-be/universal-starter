@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core'
-import { RouterModule } from '@angular/router'
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 
-import { SponsorsComponent } from './sponsors.component';
-import { SponsorsRoutes } from './sponsors.routes';
-import { SharedModule } from '../shared/shared.module';
+import {SponsorsComponent} from './sponsors.component';
+import {SponsorsRoutes} from './sponsors.routes';
+import {SharedModule} from '../shared/shared.module';
 
 const COMPONENTS = [
   SponsorsComponent

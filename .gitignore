@@ -1,7 +1,9 @@
 .idea
 .DS_Store
 .vscode
-morgan.log
+
+package-lock.json
+yarn.lock
 
 # Built #
 /__build__/
@@ -16,7 +18,6 @@ morgan.log
 # Node #
 *.log
 /npm-debug.log.*
-package-lock.json
 
 # Webpack #
 webpack.records.json

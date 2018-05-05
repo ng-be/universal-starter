@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core'
-import { RouterModule } from '@angular/router'
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { ConferenceDayComponent } from './conference-day.component';
 import { ConferenceDayRoutes } from './conference-day.routes';

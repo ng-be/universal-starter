@@ -14,10 +14,7 @@ const IMPORTS = [
   ModuleMapLoaderModule,
 ];
 
-const PROVIDERS = [
-  {provide: 'isBrowser', useValue: false},
-  {provide: 'isNode', useValue: true},
-];
+const PROVIDERS = [];
 
 @NgModule({
   imports: [

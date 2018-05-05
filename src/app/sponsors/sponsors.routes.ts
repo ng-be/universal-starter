@@ -1,4 +1,4 @@
-import { SponsorsComponent } from './sponsors.component';
+import {SponsorsComponent} from './sponsors.component';
 
 export const SponsorsRoutes = [
   {

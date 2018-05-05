@@ -18,8 +18,7 @@
     "forin": true,
     "import-blacklist": [
       true,
-      "rxjs/Rx",
-      "rxjs/operators"
+      "rxjs/Rx"
     ],
     "import-spacing": true,
     "indent": [
@@ -29,7 +28,7 @@
     "interface-over-type-literal": true,
     "label-position": true,
     "max-line-length": [
-      true,
+      false,
       140
     ],
     "member-access": false,
@@ -121,13 +120,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "ngbe",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "ngbe",
       "kebab-case"
     ],
     "no-output-on-prefix": true,

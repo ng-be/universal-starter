@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import {Injectable} from '@angular/core';
+import {Meta, Title} from '@angular/platform-browser';
 
-import { ISeo } from '../interfaces/seo.interface';
-import { LinkService } from './link.service';
+import {ISeo} from '../interfaces/seo.interface';
+import {LinkService} from './link.service';
 
 @Injectable()
 export class SeoService {
@@ -24,7 +24,7 @@ export class SeoService {
     this.handleDescription(data ? data.description : undefined);
     this.handleUrl(data ? data.url : undefined);
     if (data.images && data.images.length) {
-      data.images.forEach(image => this.handleImage(image))
+      data.images.forEach(image => this.handleImage(image));
     }
     // always add the default image anyway
     this.handleImage();
@@ -61,7 +61,7 @@ export class SeoService {
 
   private handleUrl(url?: string) {
 
-    url = this.baseUrl + ( url && url.length ? url : '' );
+    url = this.baseUrl + (url && url.length ? url : '');
 
     this.metaService.addTags([
       {property: 'og:url', content: url},
@@ -69,7 +69,7 @@ export class SeoService {
     this.linkService.updateTag({
       rel: 'canonical',
       href: url
-    })
+    });
   }
 
   private handleImage(image?: string) {
@@ -87,6 +87,5 @@ export class SeoService {
     ]);
 
   }
-
 
 }
