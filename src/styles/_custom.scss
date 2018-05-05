@@ -136,17 +136,35 @@ a:hover {
 /* Buttons */
 
 /* Custom default button */
-.btn-primary {
-  &, &:hover, &:focus {
-    color: #333;
-    text-shadow: none; /* Prevent inheritance from `body` */
-    background-color: #fff;
-    border: .05rem solid #fff;
+.btn {
+  &-primary {
+    & {
+      color: #333;
+      text-shadow: none; /* Prevent inheritance from `body` */
+      background-color: #fff;
+      border: .05rem solid #fff;
+    }
+    &:hover, &:focus {
+      color: #000;
+      text-shadow: none; /* Prevent inheritance from `body` */
+      background-color: #ddd;
+      border: .05rem solid #ccc;
+    }
   }
-  &:hover, &:focus {
-    color: #000;
-    text-shadow: none; /* Prevent inheritance from `body` */
-    background-color: #ddd;
-    border: .05rem solid #ccc;
+  &-secondary {
+    & {
+      color: #fff;
+      text-shadow: none; /* Prevent inheritance from `body` */
+      background-color: $ngbe-red;
+      border: .05rem solid $ngbe-red;
+    }
+    &:hover, &:focus {
+      color: #fff;
+      text-shadow: none; /* Prevent inheritance from `body` */
+      background-color: $ngbe-red;
+      border: .05rem solid darken($ngbe-red, 20%);;
+    }
   }
 }
+
+

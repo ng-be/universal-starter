@@ -14,11 +14,11 @@
     height: 350px;
   }
 
-  .location-intro {
+  .location--intro {
     text-align: center;
   }
 
-  .location-more-info {
+  .location--more-info {
     margin: {
       top: 25px;
     }
@@ -31,7 +31,7 @@
     }
   }
 
-  .location-images {
+  .location--images {
     display: flex;
     flex-wrap: wrap;
     img {
@@ -39,23 +39,23 @@
     }
   }
 
-  .location-image {
+  .location--images__image {
     flex: 1 0 300px;
   }
 
-  .location-image--25 {
+  .location--images__image25 {
     flex: 1 0 25%;
   }
 
-  .location-image--33 {
+  .location--images-image33 {
     flex: 1 0 33%;
   }
 
-  .location-image--50 {
+  .location--images__image50 {
     flex: 1 0 50%;
   }
 
-  .location-image--100 {
+  .location--images__image100 {
     flex: 1 0 100%;
   }
 

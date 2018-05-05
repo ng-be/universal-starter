@@ -6,7 +6,23 @@
 
   .conference-day {
 
+    &--intro {
 
+      p {
+        margin: {
+          left: auto;
+          right: auto;
+        }
+        max-width: 600px;
+        &:last-child {
+          margin: {
+            bottom: 0;
+          }
+        }
+
+      }
+
+    }
 
   }
 
