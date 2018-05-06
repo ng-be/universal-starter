@@ -37,9 +37,11 @@
         decoration: none;
         indent: -9999px;
       }
+      border: none;
 
       &:hover {
         animation: spin 0.5s infinite linear;
+        border: none;
       }
 
       @-webkit-keyframes spin {

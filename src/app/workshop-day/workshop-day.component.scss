@@ -26,4 +26,19 @@
 
   }
 
+  .included--items {
+    margin: {
+      top: 20px;
+    }
+  }
+  .included--item {
+    margin: {
+      bottom: 20px;
+    }
+
+    p:last-child {
+      margin: 0;
+    }
+  }
+
 }

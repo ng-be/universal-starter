@@ -29,12 +29,21 @@
     }
 
     &__title {
-      color: $ngbe-yellow;
+      // color: $ngbe-yellow;
     }
     &__date {
 
     }
     &__description {
+
+      .buy {
+        em {
+          font: {
+            style: normal;
+            weight: bold;
+          }
+        }
+      }
 
     }
   }

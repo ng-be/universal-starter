@@ -1,5 +1,4 @@
 @import "../../../../styles/variables";
-
 @import "../../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../../node_modules/bootstrap/scss/variables";
 @import "../../../../../node_modules/bootstrap/scss/mixins/breakpoints";
@@ -41,6 +40,7 @@
     a {
       display: block;
       box-sizing: border-box;
+      border: none;
       img {
         display: block;
         width: 100%;
