@@ -38,10 +38,11 @@
         indent: -9999px;
       }
       border: none;
+      transition: all 0.2s ease-in-out;
 
       &:hover {
-        animation: spin 0.5s infinite linear;
         border: none;
+        transform: scale(1.2);
       }
 
       @-webkit-keyframes spin {
@@ -62,6 +63,13 @@
     padding: {
       left: 0;
       right: 0;
+    }
+
+    .tickets {
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     &-nav {

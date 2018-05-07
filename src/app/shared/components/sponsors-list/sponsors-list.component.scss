@@ -56,6 +56,7 @@
         width: 100%;
         box-sizing: border-box;
         padding: 25px;
+        transition: all 0.2s ease-in-out;
 
         @include media-breakpoint-between(sm, md) {
           padding: 5px;
@@ -67,7 +68,7 @@
         border: none;
 
         img {
-          transform: rotate(10deg);
+          transform: scale(1.05);
         }
       }
     }
