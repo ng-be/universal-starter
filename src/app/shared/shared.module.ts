@@ -8,13 +8,15 @@ import {CommunityComponent} from './components/community/community.component';
 import {SeoService} from './services/seo.service';
 import {LinkService} from './services/link.service';
 import {LastYearsImpressionsComponent} from './components/last-years-impressions/last-years-impressions.component';
+import {SponsorsListComponent} from './components/sponsors-list/sponsors-list.component';
 
 const COMPONENTS = [
   HeaderComponent,
   FooterComponent,
   OrganisersComponent,
   CommunityComponent,
-  LastYearsImpressionsComponent
+  LastYearsImpressionsComponent,
+  SponsorsListComponent
 ];
 
 const PROVIDERS = [

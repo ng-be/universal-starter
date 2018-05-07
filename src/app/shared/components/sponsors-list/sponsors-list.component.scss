@@ -1,0 +1,119 @@
+@import "../../../../styles/variables";
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+:host {
+
+  display: block;
+
+  padding: 25px 0;
+
+  .last {
+    display: none;
+    @include media-breakpoint-down(xs) {
+      display: block;
+    }
+  }
+
+  .first {
+    display: none;
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
+
+  }
+
+  .sponsors {
+    margin: {
+      top: 50px;
+      bottom: 25px;
+    }
+  }
+
+  .sponsor--logo {
+
+    position: relative;
+    margin-bottom: 20px;
+
+    /*
+    @media (min-width: 768px) and (max-width: 991px) {
+      &.col-sm-offset-1point5 {
+        margin-left: 10.416666667%;
+      }
+    }
+    */
+
+    a {
+      display: block;
+      box-sizing: border-box;
+      background: #fff;
+      border-radius: 100px;
+      border: 5px solid rgba(255, 255, 255, 0.05);
+
+      img {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 25px;
+
+        @include media-breakpoint-between(sm, md) {
+          padding: 5px;
+        }
+
+      }
+      &:hover {
+        text-decoration: none;
+        border: none;
+
+        img {
+          transform: rotate(10deg);
+        }
+      }
+    }
+    &__round {
+      a {
+        border-radius: 100px;
+      }
+    }
+
+    &--label {
+
+      position: absolute;
+      top: 0;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 0.7rem;
+
+      span {
+        padding: 3px 5px;
+        border-radius: 2px;
+        background-color: #cbced5;
+        text-shadow: none;
+      }
+
+      &__platinum {
+        span {
+          border-right: 10px solid $ngbe-red;
+          background: $ngbe-yellow;
+          border-left: 10px solid $ngbe-black;
+          color: rgba(0, 0, 0, 0.6);
+        }
+      }
+
+      &__gold {
+        span {
+          background: $ngbe-yellow;
+          color: rgba(0, 0, 0, 0.6);
+        }
+      }
+
+    }
+
+  }
+
+}
