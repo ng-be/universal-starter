@@ -1,13 +1,16 @@
-@import "../../../../styles/variables";
+@import "../../../../../node_modules/bootstrap/scss/bootstrap-grid";
 @import "../../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../../node_modules/bootstrap/scss/variables";
 @import "../../../../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../../../../styles/variables";
 
 :host {
 
   display: block;
 
-  padding: 25px 0 0 0;
+  & > div:not(.banner) {
+    padding: 25px 0 25px 0;
+  }
 
   h3 {
     margin: {
@@ -15,9 +18,22 @@
     }
   }
 
+  p {
+    max-width: 600px;
+    margin: 25px auto;
+  }
+
   .organiser {
-    margin-bottom: 25px;
+
     text-align: left;
+
+    @include media-breakpoint-down(xs) {
+      &.first {
+        margin: {
+          bottom: 25px;
+        }
+      }
+    }
 
     &__image {
       img {

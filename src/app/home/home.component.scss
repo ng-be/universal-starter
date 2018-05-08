@@ -17,14 +17,27 @@
   }
 
   .schedule-day {
+
     margin: {
       top: 10px;
-      bottom: 10px;
     }
 
     @include media-breakpoint-down(md) {
       text: {
         align: center !important;
+      }
+
+      &.schedule-day-workshop {
+        margin: {
+          top: 25px;
+          bottom: 25px;
+        }
+      }
+
+      &.schedule-day-conference {
+        margin: {
+          bottom: 0;
+        }
       }
     }
 

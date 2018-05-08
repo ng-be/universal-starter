@@ -9,15 +9,24 @@
   display: block;
 
   .memories {
-    max-width: 400px;
-    margin: 20px auto;
+    max-width: 600px;
+    margin: 25px auto;
   }
+
   .last-years-impression {
 
     @include media-breakpoint-down(md) {
+
       text: {
         align: center !important;
       }
+
+      &.first {
+        margin: {
+          bottom: 25px;
+        }
+      }
+
     }
 
     &__title {

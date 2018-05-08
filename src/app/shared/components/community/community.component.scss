@@ -9,6 +9,11 @@
 
   padding: 25px 0 0 0;
 
+  p {
+    max-width: 600px;
+    margin: 25px auto;
+  }
+
   .last {
     display: none;
     @include media-breakpoint-down(xs) {
