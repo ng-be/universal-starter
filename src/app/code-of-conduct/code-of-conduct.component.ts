@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'ngbe-code-of-conduct',
@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
     './code-of-conduct.component.scss'
   ]
 })
-export class CodeOfConductComponent {}
+export class CodeOfConductComponent {
+}

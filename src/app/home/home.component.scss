@@ -8,14 +8,6 @@
 
   display: block;
 
-  .container {
-    p {
-      margin: {
-        // bottom: 0;
-      }
-    }
-  }
-
   .schedule-day {
 
     margin: {
@@ -45,7 +37,7 @@
       // color: $ngbe-yellow;
     }
     &__date {
-
+      display: block;
     }
     &__description {
 
