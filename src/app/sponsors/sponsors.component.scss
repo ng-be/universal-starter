@@ -92,7 +92,8 @@
         background: #fff;
         display: block;
         transition: all 0.2s ease-in;
-        border-radius: 100px;
+        border-radius: 150px;
+        border: 10px solid $ngbe-yellow;
         width: 60%;
         margin: {
           bottom: 25px;
@@ -116,6 +117,39 @@
     &--silver {
 
       padding: 25px 0;
+      text-align: left;
+
+      h2 {
+        text-align: center;
+      }
+
+      &__image {
+        box-sizing: border-box;
+        padding: 25px;
+        //background: rgba(255,255,255, 0.4);
+        background: #fff;
+        display: block;
+        transition: all 0.2s ease-in;
+        border-radius: 150px;
+        border: 10px solid $ngbe-yellow;
+        width: 80%;
+        margin: {
+          bottom: 25px;
+          left: auto;
+          right: auto;
+        }
+
+        img {
+          display: block;
+          width: 100%;
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.05);
+          }
+        }
+      }
 
     }
 
