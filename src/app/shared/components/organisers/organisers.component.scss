@@ -40,6 +40,15 @@
         border-radius: 50%;
         border: 6px solid $ngbe-yellow;
         width: 100%;
+        transition: all 0.2s ease-in-out;
+      }
+      a {
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          img {
+            transform: scale(1.05);
+          }
+        }
       }
     }
 
