@@ -5,6 +5,7 @@ import {map, filter} from 'rxjs/operators';
 
 import {ISeo} from '../../interfaces/seo.interface';
 import {SeoService} from '../../services/seo.service';
+import {HostListener} from '@angular/compiler/src/core';
 
 declare const window: any;
 
@@ -18,6 +19,7 @@ declare const window: any;
 export class HeaderComponent {
 
   @ViewChild('navbarToggler') navbarToggler: ElementRef;
+  mobileNavToggled = false;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object,
               private router: Router,
@@ -26,6 +28,10 @@ export class HeaderComponent {
 
     this.handleNavigationEnd();
 
+  }
+
+  toggleNav() {
+    this.mobileNavToggled = !this.mobileNavToggled;
   }
 
   private handleNavigationEnd() {
@@ -45,7 +51,7 @@ export class HeaderComponent {
       .subscribe((route) => {
 
         if (!this.navbarToggler.nativeElement.classList.contains('collapsed')) {
-          this.navbarToggler.nativeElement.click();
+          this.toggleNav();
         }
         if (isPlatformBrowser(this.platformId)) {
           window.scroll(0, 0);
