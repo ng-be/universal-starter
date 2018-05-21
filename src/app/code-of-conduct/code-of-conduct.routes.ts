@@ -1,4 +1,4 @@
-import { CodeOfConductComponent } from './code-of-conduct.component';
+import {CodeOfConductComponent} from './code-of-conduct.component';
 
 export const CodeOfConductRoutes = [
   {

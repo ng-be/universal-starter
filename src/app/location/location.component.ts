@@ -7,7 +7,4 @@ import { Component } from '@angular/core';
     './location.component.scss'
   ]
 })
-export class LocationComponent {
-
-
-}
+export class LocationComponent {}

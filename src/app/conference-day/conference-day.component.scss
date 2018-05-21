@@ -1,0 +1,50 @@
+@import "../../styles/variables";
+
+:host {
+
+  display: block;
+
+  .conference-day {
+
+    &--intro {
+
+      p {
+        margin: {
+          left: auto;
+          right: auto;
+        }
+        max-width: 600px;
+        &:last-child {
+          margin: {
+            bottom: 0;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .included--items {
+    margin: {
+      top: 20px;
+    }
+  }
+  .included--item {
+    margin: {
+      bottom: 20px;
+    }
+
+    p:last-child {
+      margin: 0;
+    }
+  }
+
+  .speakers {
+    &--list {
+      margin: 25px 0;
+    }
+  }
+
+}

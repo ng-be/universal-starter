@@ -37,9 +37,12 @@
         decoration: none;
         indent: -9999px;
       }
+      border: none;
+      transition: all 0.2s ease-in-out;
 
       &:hover {
-        animation: spin 0.5s infinite linear;
+        border: none;
+        transform: scale(1.2);
       }
 
       @-webkit-keyframes spin {
@@ -62,6 +65,13 @@
       right: 0;
     }
 
+    .tickets {
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
     &-nav {
 
       @include media-breakpoint-up(lg) {
@@ -71,13 +81,26 @@
         }
       }
 
+      .nav-item {
+        padding: {
+          bottom: 10px;
+          top: 10px;
+        }
+      }
+
       .nav-link {
         color: #fff;
         text: {
           transform: uppercase;
           decoration: none;
         }
-        padding: .25rem 0;
+        display: inline-block;
+        padding: {
+          top: 10px;
+          right: 0;
+          left: 0;
+          bottom: 0;
+        }
         font-weight: 700;
         color: rgba(255, 255, 255, .5);
         background-color: transparent;

@@ -1,35 +1,54 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../../styles/variables";
 
 :host {
 
   display: block;
 
-  .container {
-    p {
-      margin: {
-        bottom: 0;
+  .schedule-day {
+
+    margin: {
+      top: 10px;
+    }
+
+    @include media-breakpoint-down(md) {
+      text: {
+        align: center !important;
+      }
+
+      &.schedule-day-workshop {
+        margin: {
+          top: 25px;
+          bottom: 25px;
+        }
+      }
+
+      &.schedule-day-conference {
+        margin: {
+          bottom: 0;
+        }
       }
     }
-  }
 
-  .editx-challenge {
-
-    padding: 25px 0;
-    max-width: 700px;
-    margin: 0 auto;
-    text: {
-      align: center;
+    &__title {
+      // color: $ngbe-yellow;
     }
-
-    p {
-      padding: 0 50px;
-    }
-
-    img {
+    &__date {
       display: block;
-      width: calc(100% - 50px);
-      max-width: 700px;
-      margin: 0 25px;
+    }
+    &__description {
+
+      .buy {
+        em {
+          font: {
+            style: normal;
+            weight: bold;
+          }
+        }
+      }
 
     }
   }

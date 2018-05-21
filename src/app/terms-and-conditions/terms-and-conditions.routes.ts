@@ -1,4 +1,4 @@
-import { TermsAndConditionsComponent } from './terms-and-conditions.component';
+import {TermsAndConditionsComponent} from './terms-and-conditions.component';
 
 export const TermsAndConditionsRoutes = [
   {

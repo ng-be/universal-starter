@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ServiceWorkerModule } from '@angular/service-worker'
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { environment } from '../environments/environment';
 
@@ -10,19 +10,19 @@ import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routes';
 import { HomeComponent } from './home/home.component';
 
+
 const COMPONENTS = [
   AppComponent,
   HomeComponent,
 ];
 
 const PROVIDERS = [
-  {provide: 'isBrowser', useValue: true},
-  {provide: 'isNode', useValue: false},
+
 ];
 
 const IMPORTS = [
   BrowserModule.withServerTransition({appId: 'ngbe-app'}),
-  environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
+  ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
   RouterModule.forRoot([
     ...AppRoutes
   ]),
@@ -34,7 +34,7 @@ const IMPORTS = [
     ...COMPONENTS
   ],
   imports: [
-    ...IMPORTS
+    ...IMPORTS,
   ],
   providers: [
     ...PROVIDERS

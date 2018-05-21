@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core'
-import { RouterModule } from '@angular/router'
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 
-import { CodeOfConductComponent } from './code-of-conduct.component';
-import { CodeOfConductRoutes } from './code-of-conduct.routes';
-import { SharedModule } from '../shared/shared.module';
+import {CodeOfConductComponent} from './code-of-conduct.component';
+import {CodeOfConductRoutes} from './code-of-conduct.routes';
+import {SharedModule} from '../shared/shared.module';
 
 const COMPONENTS = [
   CodeOfConductComponent

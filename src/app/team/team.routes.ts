@@ -1,4 +1,4 @@
-import { TeamComponent } from './team.component';
+import {TeamComponent} from './team.component';
 
 export const TeamRoutes = [
   {

@@ -1,17 +1,14 @@
 {
-  "index": "/",
+  "index": "/index.html",
   "assetGroups": [{
-    "name": "ngbe2018",
+    "name": "app",
     "installMode": "prefetch",
     "resources": {
       "files": [
         "/favicon.ico",
-        "/index.html"
-      ],
-      "versionedFiles": [
-        "/*.bundle.css",
-        "/*.bundle.js",
-        "/*.chunk.js"
+        "/index.html",
+        "/*.css",
+        "/*.js"
       ]
     }
   }, {

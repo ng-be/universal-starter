@@ -1,0 +1,45 @@
+@import "../../../../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../../../../styles/variables";
+
+:host {
+
+  display: block;
+
+  .memories {
+    max-width: 600px;
+    margin: 25px auto;
+  }
+
+  .last-years-impression {
+
+    @include media-breakpoint-down(md) {
+
+      text: {
+        align: center !important;
+      }
+
+      &.first {
+        margin: {
+          bottom: 25px;
+        }
+      }
+
+    }
+
+    &__title {
+      color: $ngbe-yellow;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      display: block;
+      margin: 30px auto;
+      min-height: 200px;
+    }
+
+  }
+}

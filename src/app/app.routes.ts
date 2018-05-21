@@ -1,4 +1,4 @@
-import { HomeComponent } from './home/home.component';
+import {HomeComponent} from './home/home.component';
 
 export const AppRoutes = [
   {
@@ -6,14 +6,24 @@ export const AppRoutes = [
     component: HomeComponent,
     pathMatch: 'full',
     data: {
-      seo: {
-
-      }
+      seo: {}
     }
+  },
+  {
+    path: 'sponsors',
+    loadChildren: './sponsors/sponsors.module#SponsorsModule'
   },
   {
     path: 'location',
     loadChildren: './location/location.module#LocationModule'
+  },
+  {
+    path: 'conference-day',
+    loadChildren: './conference-day/conference-day.module#ConferenceDayModule'
+  },
+  {
+    path: 'workshop-day',
+    loadChildren: './workshop-day/workshop-day.module#WorkshopDayModule'
   },
   {
     path: 'team',

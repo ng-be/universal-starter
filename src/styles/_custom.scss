@@ -5,29 +5,8 @@
 @import "../../node_modules/bootstrap/scss/transitions";
 @import "../../node_modules/bootstrap/scss/navbar";
 @import "../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../../node_modules/bootstrap/scss/_buttons.scss";
 @import "variables";
-
-/*
- * Globals
- */
-
-/* Links */
-
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
-
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
-}
 
 /*
  * Base structure
@@ -56,27 +35,29 @@ body {
   padding: 25px 0;
 }
 
+a:not(.btn) {
+  color: $ngbe-yellow;
+  background-color: transparent;
+  border-bottom: .05rem dotted $ngbe-yellow;
+  padding: .25rem 0;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    border-bottom: .05rem solid $ngbe-yellow;
+    text-decoration: none;
+  }
+
+}
+
 .content {
 
   em {
     color: #d52533;
   }
 
-  a {
-    color: $ngbe-yellow;
-    background-color: transparent;
-    border-bottom: .10rem solid transparent;
-    padding: .25rem 0;
-
-    &:hover {
-      border-color: $ngbe-yellow;
-      text-decoration: none;
-    }
-  }
-
   h1 {
     font: {
-      size: 30px;
+      size: 2.1rem;
     }
     margin: {
       bottom: 25px;
@@ -86,7 +67,7 @@ body {
 
   h2 {
     font: {
-      size: 24px;
+      size: 1.8rem;
     }
     margin: {
       bottom: 20px;
@@ -96,32 +77,99 @@ body {
 
   h3 {
     font: {
-      size: 16px;
+      size: 1.2rem;
     }
     margin: {
       bottom: 15px;
     }
+    line-height: 160%;
     color: darken(#fff, 20%);
+  }
+
+  h4 {
+    font: {
+      size: 1.1rem;
+    }
+    margin: {
+      bottom: 10px;
+    }
+    color: darken(#fff, 20%);
+  }
+
+  p:last-child {
+    margin: 0;
   }
 
   @include media-breakpoint-up(md) {
     h1 {
       font: {
-        size: 40px;
+        size: 2.6rem;
       }
     }
 
     h2 {
       font: {
-        size: 32px;
+        size: 2.1rem;
       }
     }
 
     h3 {
       font: {
-        size: 24px;
+        size: 1.6rem;
+      }
+      line-height: 120%;
+    }
+
+    h4 {
+      font: {
+        size: 1.2rem;
       }
     }
   }
 
 }
+
+/*
+ * Globals
+ */
+
+/* Buttons */
+
+.btn {
+
+  &-primary {
+    & {
+      color: #333;
+      text-shadow: none; /* Prevent inheritance from `body` */
+      background-color: #fff;
+      border: .05rem solid #fff;
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover, &:focus {
+      color: #000;
+      text-shadow: none; /* Prevent inheritance from `body` */
+      background-color: #ddd;
+      border: .05rem solid #ccc;
+      transform: scale(1.05);
+    }
+  }
+
+  &-secondary {
+    & {
+      color: #fff;
+      text-shadow: none; /* Prevent inheritance from `body` */
+      background-color: $ngbe-red;
+      border: .05rem solid $ngbe-red;
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover, &:focus {
+      color: #fff;
+      text-shadow: none; /* Prevent inheritance from `body` */
+      background-color: $ngbe-red;
+      border: .05rem solid darken($ngbe-red, 20%);
+      transform: scale(1.05);
+    }
+  }
+}
+
+

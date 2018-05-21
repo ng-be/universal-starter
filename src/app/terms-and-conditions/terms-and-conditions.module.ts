@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core'
-import { RouterModule } from '@angular/router'
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 
-import { TermsAndConditionsComponent } from './terms-and-conditions.component';
-import { SharedModule } from '../shared/shared.module';
-import { TermsAndConditionsRoutes } from './terms-and-conditions.routes';
+import {TermsAndConditionsComponent} from './terms-and-conditions.component';
+import {SharedModule} from '../shared/shared.module';
+import {TermsAndConditionsRoutes} from './terms-and-conditions.routes';
 
 const COMPONENTS = [
   TermsAndConditionsComponent
@@ -24,6 +24,4 @@ const IMPORTS = [
     ...IMPORTS
   ]
 })
-export class TermsAndConditionsModule {
-
-}
+export class TermsAndConditionsModule {}
