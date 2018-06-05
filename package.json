@@ -1,19 +1,14 @@
 {
   "name": "ngbe2018",
-  "version": "0.0.0",
+  "version": "3.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/angular/universal-starter.git"
+    "url": "https://github.com/ng-be/www-ng-be-org"
   },
   "contributors": [
-    "AngularClass <hello@angularclass.com>",
-    "PatrickJS <patrick@angularclass.com>",
-    "Jeff Whelpley <jeff@gethuman.com>",
-    "Jeff Cross <crossj@google.com>",
-    "Mark Pieszak <mpieszak84@gmail.com>",
-    "Jason Jean <jasonjean1993@gmail.com>",
-    "Fabian Wiles <fabian.wiles@gmail.com>"
+    "Sam Vloeberghs <jasonjean1993@gmail.com>",
+    "Jurgen Van De Moere <jurgen.van.de.moere@gmail.com>"
   ],
   "scripts": {
     "ng": "ng",

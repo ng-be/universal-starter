@@ -44,6 +44,36 @@
   .speakers {
     &--list {
       margin: 25px 0;
+
+      & > p {
+        max-width: 500px;
+        margin: 0 auto 50px auto;
+      }
+    }
+  }
+
+  .speaker {
+    margin: {
+      bottom: 25px;
+    }
+    &--image {
+      margin: {
+        bottom: 15px;
+      }
+      img {
+        border-radius: 50%;
+        border: 6px solid $ngbe-yellow;
+        transition: all 0.2s ease-in-out;
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+    &--description {
+      h5 {
+        font: {
+          size: 1.1em;
+        }
+      }
     }
   }
 
