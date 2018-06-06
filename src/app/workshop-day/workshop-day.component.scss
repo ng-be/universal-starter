@@ -1,3 +1,7 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
 @import "../../styles/variables";
 
 :host {
@@ -43,7 +47,121 @@
 
   .workshops {
     &--list {
-      margin: 25px 0;
+      margin: 25px 0 0 0;
+
+      @include media-breakpoint-up(md) {
+        padding: 25px 0;
+      }
+    }
+  }
+
+  .workshop {
+
+    margin: {
+      bottom: 25px;
+    }
+
+    @include media-breakpoint-up(md) {
+      &.left {
+        h3, h4, h5, p {
+          text-align: right;
+        }
+      }
+      &.right {
+        h3, h4, h5, p {
+          text-align: left;
+        }
+      }
+    }
+
+    h3 {
+    }
+    h4 {
+      font-size: 1.1em;
+      color: #fff;
+      margin: {
+        bottom: 5px;
+      }
+    }
+
+    h5 {
+      font: {
+        size: 1em;
+        weight: normal;
+      }
+      color: #fff;
+      margin: {
+        bottom: 25px;
+      }
+    }
+
+    &--description {
+
+      .buy {
+        em {
+          color: #fff;
+        }
+      }
+
+      @include media-breakpoint-only(md) {
+        .sep {
+          display: none;
+        }
+        .btn:first-child {
+          display: inline-block;
+          margin: {
+            bottom: 10px;
+          }
+        }
+      }
+
+      @include media-breakpoint-only(xs) {
+        .sep {
+          display: none;
+        }
+        .btn {
+          display: block;
+          width: auto;
+          &:first-child {
+            margin: {
+              bottom: 10px;
+            }
+          }
+        }
+      }
+
+    }
+
+    &--image {
+      margin: {
+        bottom: 15px;
+      }
+      img {
+        border-radius: 50%;
+        border: 6px solid $ngbe-yellow;
+        transition: all 0.2s ease-in-out;
+        width: 100%;
+        margin: 0 auto;
+
+        transition: all 0.2s ease-in-out;
+
+        @include media-breakpoint-down(md) {
+          width: 75%;
+          max-width: 200px;
+        }
+
+      }
+
+      a {
+        border: none;
+        transition: all 0.2s ease-in-out;
+        background: transparent;
+        &:hover {
+          img {
+            transform: scale(1.05);
+          }
+        }
+      }
     }
   }
 

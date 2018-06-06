@@ -1,2 +1,11 @@
 @import "variables";
 @import "custom";
+
+.buy {
+  em {
+    font: {
+      style: normal;
+      weight: bold;
+    }
+  }
+}
