@@ -30,6 +30,10 @@ export const AppRoutes = [
     loadChildren: './team/team.module#TeamModule'
   },
   {
+    path: 'social-media-challenge',
+    loadChildren: './social-media-challenge/social-media-challenge.module#SocialMediaChallengeModule'
+  },
+  {
     path: 'code-of-conduct',
     loadChildren: './code-of-conduct/code-of-conduct.module#CodeOfConductModule'
   },

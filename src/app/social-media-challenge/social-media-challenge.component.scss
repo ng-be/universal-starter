@@ -1,0 +1,69 @@
+@import "../../styles/variables";
+
+:host {
+
+  display: block;
+
+  h3 {
+    margin: {
+      right: auto;
+      left: auto;
+    }
+    max-width: 500px;
+  }
+
+  h4 {
+    font: {
+      size: 1.4em;
+    }
+    margin: {
+      bottom: 25px;
+    }
+  }
+
+  em {
+    color: $ngbe-yellow;
+  }
+
+  .rules {
+    margin: {
+      top: 25px;
+      bottom: 25px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 400px;
+      font: {
+        size: 1.1em;
+      }
+    }
+    li {
+      margin: {
+        bottom: 20px;
+      }
+      &:last-child {
+        margin: {
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  .example {
+    margin: {
+      top: 25px;
+      bottom: 25px;
+    }
+
+    .embedded {
+      margin: {
+        top: 25px;
+        right: auto;
+        left: auto;
+      }
+      max-width: 450px;
+    }
+  }
+}
