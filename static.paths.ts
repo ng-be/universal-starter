@@ -6,5 +6,6 @@ export const ROUTES = [
   '/conference-day',
   '/workshop-day',
   '/code-of-conduct',
+  '/social-media-challenge',
   '/terms-and-conditions'
 ];
