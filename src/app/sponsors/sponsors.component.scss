@@ -88,7 +88,6 @@
       &__image {
         box-sizing: border-box;
         padding: 35px;
-        //background: rgba(255,255,255, 0.4);
         background: #fff;
         display: block;
         transition: all 0.2s ease-in;
@@ -126,7 +125,6 @@
       &__image {
         box-sizing: border-box;
         padding: 25px;
-        //background: rgba(255,255,255, 0.4);
         background: #fff;
         display: block;
         transition: all 0.2s ease-in;
@@ -151,6 +149,49 @@
         }
       }
 
+    }
+
+    &--bronze {
+
+      @include media-breakpoint-down(sm) {
+
+        margin: {
+          bottom: 25px;
+        }
+
+        .last {
+          margin: {
+            bottom: 0;
+          }
+        }
+      }
+
+      &__image {
+        box-sizing: border-box;
+        padding: 35px;
+        background: #fff;
+        display: block;
+        transition: all 0.2s ease-in;
+        border-radius: 150px;
+        border: 10px solid $ngbe-yellow;
+        width: 60%;
+        margin: {
+          bottom: 25px;
+          left: auto;
+          right: auto;
+        }
+
+        img {
+          display: block;
+          width: 100%;
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.05);
+          }
+        }
+      }
     }
 
   }
