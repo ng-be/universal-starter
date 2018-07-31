@@ -168,7 +168,13 @@
 }
 
 .section--workshop-details {
-  margin-bottom: 2rem;
+
+  &.nobanner {
+    margin-bottom: 2rem;
+    padding: {
+      top: 2rem;
+    }
+  }
   .workshop-title {
     color: #cccccc;
     font-size: 1.8rem;
