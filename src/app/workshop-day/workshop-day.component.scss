@@ -166,3 +166,56 @@
   }
 
 }
+
+.section--workshop-details {
+  margin-bottom: 2rem;
+  .workshop-title {
+    color: #cccccc;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  .workshop-trainers {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+  .workshop-date {
+
+  }
+  .workshop-description {
+    margin-bottom: 1em;
+  }
+  .workshop-buy {
+    margin-bottom: 2em;
+  }
+}
+
+.schedule-item {
+  display: flex;
+  &__time {
+    background: #f9dc29;
+    flex: 0 0 100px;
+    padding: 15px 5px;
+    font-size: 1.2rem;
+    border-left: 1px solid #e1c93b;
+    border-bottom: 1px solid #e1c93b;
+    color: rgba(0, 0, 0, 0.618);
+    text-shadow: none;
+    text-align: center;
+  }
+  &__description {
+    flex: 1;
+    background: #fffdf0;
+    padding: 15px 30px;
+    color: rgba(0, 0, 0, 0.618);
+    text-shadow: none;
+    border-left: 1px solid #e1c93b;
+    border-bottom: 1px solid #e1c93b;
+    border-right: 1px solid #e1c93b;
+    text-align: left;
+    ul {
+      padding-left: 1em;
+      margin-bottom: 0;
+    }
+  }
+}
