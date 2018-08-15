@@ -7,8 +7,12 @@
     "url": "https://github.com/ng-be/www-ng-be-org"
   },
   "contributors": [
-    "Sam Vloeberghs <jasonjean1993@gmail.com>",
+    "Sam Vloeberghs <sam.vloeberghs@gmail.com>",
     "Jurgen Van De Moere <jurgen.van.de.moere@gmail.com>"
+  ],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
   ],
   "scripts": {
     "ng": "ng",
